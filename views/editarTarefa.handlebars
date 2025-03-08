@@ -1,0 +1,14 @@
+<div class="container">
+    <h1>Editar Tarefa</h1>
+    <form action="/tarefas/{{tarefa.id}}/editar" method="POST">
+        <label for="descricao">Descrição:</label>
+        <input type="text" name="descricao" id="descricao"
+        value="{{tarefa.descricao}}" required>
+        <label>
+            <input type="checkbox" name="finalizada" id="finalizada"
+            {{#if tarefa.finalizada}}checked{{/if}}>
+            Finalizada
+        </label>
+        <button type="submit">Salvar</button>
+    </form>
+</div>

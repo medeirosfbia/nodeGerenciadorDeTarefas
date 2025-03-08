@@ -1,0 +1,13 @@
+<div class="container">
+    <h1>Lista de Tarefas</h1>
+    <a href="/tarefas/adicionar" class="btn">Adicionar Nova Tarefa</a>
+    <ul>
+        {{#each tarefas}}
+        <li>
+            {{descricao}} - {{#if finalizada}}Finalizada{{else}}Pendente{{/if}}
+            <a href="/tarefas/{{id}}/editar" class="btn">Editar</a>
+            <a href="/tarefas/{{id}}/excluir" class="btn">Excluir</a>
+        </li>
+        {{/each}}
+    </ul>
+</div>
